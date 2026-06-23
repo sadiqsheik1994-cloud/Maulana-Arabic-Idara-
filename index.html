@@ -1,0 +1,1627 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Maulana Arabic Idara - Premier Islamic Educational Institution offering Quran, Aalimiyat, Hifz, and modern academic courses under Mufti Muhammad Tariq Ansari Qasmi.">
+<meta name="keywords" content="Islamic education, Quran courses, Hifz, Aalimiyat, Dars-e-Nizami, CBSE tuition, competitive exams, Maulana Arabic Idara">
+<title>Maulana Arabic Idara | Excellence in Islamic Education</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Inter:wght@300;400;500;600;700&family=Amiri:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+<style>
+:root {
+  --emerald: #0F5132;
+  --emerald-light: #1a7a4a;
+  --emerald-dark: #0a3d26;
+  --gold: #D4AF37;
+  --gold-light: #e8c84a;
+  --gold-dark: #b8941e;
+  --white: #FFFFFF;
+  --bg-light: #F8FAF7;
+  --text: #1A1A1A;
+  --text-muted: #4a5568;
+  --accent: #2E7D32;
+  --border: #e2e8f0;
+  --shadow: 0 4px 24px rgba(15,81,50,0.10);
+  --shadow-lg: 0 8px 48px rgba(15,81,50,0.15);
+}
+
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+
+html{scroll-behavior:smooth;font-size:16px}
+
+body{
+  font-family:'Inter',sans-serif;
+  color:var(--text);
+  background:var(--white);
+  overflow-x:hidden;
+  line-height:1.6;
+}
+
+/* ── SCROLLBAR ── */
+::-webkit-scrollbar{width:6px}
+::-webkit-scrollbar-track{background:#f1f1f1}
+::-webkit-scrollbar-thumb{background:var(--emerald);border-radius:3px}
+
+/* ── TYPOGRAPHY ── */
+h1,h2,h3,h4{font-family:'Playfair Display',serif;line-height:1.2;font-weight:700}
+.arabic{font-family:'Amiri',serif;direction:rtl;font-size:1.5rem;line-height:1.8}
+
+/* ── UTILITIES ── */
+.container{max-width:1240px;margin:0 auto;padding:0 24px}
+.section-pad{padding:96px 0}
+.section-pad-sm{padding:64px 0}
+.text-gold{color:var(--gold)}
+.text-emerald{color:var(--emerald)}
+.bg-emerald{background:var(--emerald)}
+.bg-light{background:var(--bg-light)}
+.flex{display:flex}
+.flex-center{display:flex;align-items:center;justify-content:center}
+.grid{display:grid}
+.gap-6{gap:24px}
+.gap-8{gap:32px}
+.hidden{display:none}
+
+/* ── BUTTONS ── */
+.btn{
+  display:inline-flex;align-items:center;gap:8px;
+  padding:14px 32px;border-radius:8px;font-size:1rem;font-weight:600;
+  cursor:pointer;text-decoration:none;border:2px solid transparent;
+  transition:all .25s ease;font-family:'Inter',sans-serif;white-space:nowrap;
+}
+.btn-gold{background:var(--gold);color:var(--emerald-dark);border-color:var(--gold)}
+.btn-gold:hover{background:var(--gold-light);transform:translateY(-2px);box-shadow:0 8px 24px rgba(212,175,55,.35)}
+.btn-outline-white{background:transparent;color:var(--white);border-color:rgba(255,255,255,.6)}
+.btn-outline-white:hover{background:rgba(255,255,255,.12);border-color:#fff}
+.btn-emerald{background:var(--emerald);color:#fff;border-color:var(--emerald)}
+.btn-emerald:hover{background:var(--emerald-light);transform:translateY(-2px);box-shadow:0 8px 24px rgba(15,81,50,.3)}
+.btn-sm{padding:10px 24px;font-size:.9rem}
+
+/* ────────────────────────────────────────────────
+   HEADER
+──────────────────────────────────────────────── */
+#header{
+  position:fixed;top:0;left:0;right:0;z-index:1000;
+  padding:16px 0;
+  background:rgba(255,255,255,0);
+  backdrop-filter:blur(0px);
+  transition:all .3s ease;
+  border-bottom:1px solid transparent;
+}
+#header.scrolled{
+  background:rgba(255,255,255,.97);
+  backdrop-filter:blur(20px);
+  border-bottom-color:rgba(15,81,50,.1);
+  padding:12px 0;
+  box-shadow:0 4px 24px rgba(15,81,50,.08);
+}
+.header-inner{
+  display:flex;align-items:center;justify-content:space-between;gap:24px;
+}
+.logo{display:flex;align-items:center;gap:12px;text-decoration:none}
+.logo-mark{
+  width:48px;height:48px;border-radius:12px;
+  background:linear-gradient(135deg,var(--emerald),var(--emerald-light));
+  display:flex;align-items:center;justify-content:center;
+  flex-shrink:0;
+  box-shadow:0 4px 16px rgba(15,81,50,.3);
+}
+.logo-mark svg{width:28px;height:28px;fill:#fff}
+.logo-text{display:flex;flex-direction:column;gap:1px}
+.logo-name{font-family:'Playfair Display',serif;font-size:1.1rem;font-weight:700;color:var(--emerald);line-height:1.2}
+.logo-sub{font-size:.65rem;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--gold-dark)}
+#header.scrolled .logo-name{color:var(--emerald)}
+
+nav{display:flex;align-items:center;gap:4px}
+.nav-link{
+  padding:8px 14px;border-radius:6px;font-size:.88rem;font-weight:500;
+  text-decoration:none;color:rgba(255,255,255,.9);
+  transition:all .2s;white-space:nowrap;
+}
+.nav-link:hover{background:rgba(255,255,255,.15);color:#fff}
+#header.scrolled .nav-link{color:var(--text)}
+#header.scrolled .nav-link:hover{background:var(--bg-light);color:var(--emerald)}
+.nav-link.active{color:var(--gold)!important}
+
+.header-cta{display:flex;align-items:center;gap:12px}
+
+/* Mobile nav */
+.hamburger{
+  display:none;flex-direction:column;gap:5px;cursor:pointer;padding:8px;
+  background:transparent;border:none;
+}
+.hamburger span{display:block;width:24px;height:2px;background:#fff;border-radius:2px;transition:.3s}
+#header.scrolled .hamburger span{background:var(--emerald)}
+.mobile-nav{
+  display:none;position:fixed;top:0;left:0;right:0;bottom:0;
+  background:var(--emerald-dark);z-index:999;padding:100px 32px 32px;
+  flex-direction:column;gap:8px;
+}
+.mobile-nav.open{display:flex}
+.mobile-nav .nav-link{color:#fff;font-size:1.1rem;padding:14px 16px}
+.mobile-nav .nav-link:hover{background:rgba(255,255,255,.1)}
+.mobile-close{
+  position:absolute;top:24px;right:24px;background:transparent;
+  border:none;cursor:pointer;color:#fff;font-size:1.5rem;
+}
+
+/* ────────────────────────────────────────────────
+   HERO
+──────────────────────────────────────────────── */
+#hero{
+  min-height:100vh;position:relative;
+  display:flex;align-items:center;
+  overflow:hidden;
+  background:linear-gradient(160deg, #0a3d26 0%, #0F5132 45%, #1a5f40 80%, #0d4a2d 100%);
+}
+
+.hero-pattern{
+  position:absolute;inset:0;opacity:.08;
+  background-image:
+    radial-gradient(circle at 20% 20%, #fff 1px, transparent 1px),
+    radial-gradient(circle at 80% 80%, #fff 1px, transparent 1px);
+  background-size:60px 60px;
+}
+
+.hero-geo{
+  position:absolute;right:-100px;top:50%;transform:translateY(-50%);
+  width:600px;height:600px;opacity:.06;
+}
+
+.hero-geo svg{width:100%;height:100%}
+
+.hero-content{
+  position:relative;z-index:2;
+  max-width:740px;
+  padding:140px 0 80px;
+}
+
+.hero-badge{
+  display:inline-flex;align-items:center;gap:8px;
+  background:rgba(212,175,55,.15);border:1px solid rgba(212,175,55,.4);
+  padding:6px 16px;border-radius:50px;margin-bottom:28px;
+}
+.hero-badge span{font-size:.8rem;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--gold)}
+
+.hero-arabic{
+  font-family:'Amiri',serif;font-size:2rem;color:rgba(255,255,255,.7);
+  direction:rtl;margin-bottom:20px;line-height:1.6;
+}
+
+.hero-h1{
+  font-size:clamp(2.4rem,5vw,3.8rem);color:#fff;
+  margin-bottom:24px;
+  line-height:1.15;
+  font-weight:700;
+}
+.hero-h1 em{color:var(--gold);font-style:normal}
+
+.hero-sub{
+  font-size:1.1rem;color:rgba(255,255,255,.78);
+  margin-bottom:40px;line-height:1.75;max-width:600px;
+}
+
+.hero-ctas{display:flex;gap:16px;flex-wrap:wrap;margin-bottom:48px}
+
+.trust-grid{
+  display:flex;flex-wrap:wrap;gap:16px;
+}
+.trust-item{
+  display:flex;align-items:center;gap:8px;
+  color:rgba(255,255,255,.82);font-size:.85rem;font-weight:500;
+}
+.trust-check{
+  width:20px;height:20px;border-radius:50%;
+  background:rgba(212,175,55,.25);border:1.5px solid var(--gold);
+  display:flex;align-items:center;justify-content:center;
+  flex-shrink:0;
+  color:var(--gold);font-size:.7rem;
+}
+
+.hero-stats{
+  position:absolute;bottom:0;left:0;right:0;
+  background:rgba(255,255,255,.06);backdrop-filter:blur(10px);
+  border-top:1px solid rgba(255,255,255,.1);
+}
+.hero-stats-inner{
+  display:flex;divide-x:1px solid rgba(255,255,255,.1);
+}
+.stat-item{
+  flex:1;padding:24px 32px;text-align:center;
+  border-right:1px solid rgba(255,255,255,.1);
+}
+.stat-item:last-child{border-right:none}
+.stat-num{font-family:'Playfair Display',serif;font-size:2rem;font-weight:700;color:var(--gold)}
+.stat-label{font-size:.8rem;color:rgba(255,255,255,.65);margin-top:4px;text-transform:uppercase;letter-spacing:.05em}
+
+/* ────────────────────────────────────────────────
+   SECTION HEADERS
+──────────────────────────────────────────────── */
+.section-eyebrow{
+  display:inline-flex;align-items:center;gap:8px;
+  font-size:.78rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;
+  color:var(--gold-dark);margin-bottom:16px;
+}
+.section-eyebrow::before,.section-eyebrow::after{
+  content:'';display:block;width:24px;height:1.5px;background:var(--gold);
+}
+.section-title{font-size:clamp(1.8rem,3.5vw,2.6rem);color:var(--emerald);margin-bottom:16px}
+.section-sub{font-size:1.05rem;color:var(--text-muted);max-width:600px;line-height:1.75}
+.text-center{text-align:center}
+.mx-auto{margin-left:auto;margin-right:auto}
+
+/* ────────────────────────────────────────────────
+   QUOTE TICKER
+──────────────────────────────────────────────── */
+.quote-ticker{
+  background:var(--emerald);padding:14px 0;overflow:hidden;
+  border-bottom:3px solid var(--gold);
+}
+.ticker-inner{
+  display:flex;gap:80px;animation:ticker 40s linear infinite;
+  width:max-content;
+}
+.ticker-inner:hover{animation-play-state:paused}
+.ticker-item{
+  display:flex;align-items:center;gap:16px;
+  color:rgba(255,255,255,.9);font-size:.88rem;flex-shrink:0;
+}
+.ticker-sep{color:var(--gold);font-size:1.2rem}
+@keyframes ticker{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+
+/* ────────────────────────────────────────────────
+   FEATURES
+──────────────────────────────────────────────── */
+.features-grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:28px;margin-top:64px;
+}
+.feature-card{
+  background:#fff;border-radius:20px;padding:36px 28px;
+  border:1.5px solid var(--border);
+  transition:all .3s ease;
+  position:relative;overflow:hidden;
+}
+.feature-card::before{
+  content:'';position:absolute;inset:0;
+  background:linear-gradient(135deg,rgba(15,81,50,.03),transparent);
+  opacity:0;transition:.3s;
+}
+.feature-card:hover{
+  border-color:var(--emerald);
+  box-shadow:var(--shadow-lg);
+  transform:translateY(-6px);
+}
+.feature-card:hover::before{opacity:1}
+.feature-icon{
+  width:64px;height:64px;border-radius:16px;
+  background:linear-gradient(135deg,var(--bg-light),#fff);
+  border:2px solid rgba(15,81,50,.1);
+  display:flex;align-items:center;justify-content:center;
+  margin-bottom:20px;font-size:1.8rem;
+  transition:.3s;
+}
+.feature-card:hover .feature-icon{
+  background:linear-gradient(135deg,var(--emerald),var(--emerald-light));
+  border-color:transparent;
+}
+.feature-card:hover .feature-icon svg{fill:#fff!important}
+.feature-title{font-size:1.1rem;font-weight:700;font-family:'Playfair Display',serif;color:var(--emerald);margin-bottom:10px}
+.feature-desc{font-size:.88rem;color:var(--text-muted);line-height:1.7}
+
+/* ────────────────────────────────────────────────
+   ABOUT
+──────────────────────────────────────────────── */
+.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:center}
+.about-image-wrap{position:relative}
+.about-image{
+  border-radius:24px;overflow:hidden;
+  background:linear-gradient(135deg,var(--emerald),var(--emerald-dark));
+  aspect-ratio:4/5;display:flex;align-items:center;justify-content:center;
+  position:relative;
+}
+.about-image-bg{
+  position:absolute;inset:0;
+  background-image:
+    repeating-linear-gradient(45deg,rgba(255,255,255,.04) 0,rgba(255,255,255,.04) 1px,transparent 0,transparent 50%);
+  background-size:20px 20px;
+}
+.about-image-content{
+  position:relative;z-index:2;text-align:center;padding:40px;
+}
+.about-arabic-large{
+  font-family:'Amiri',serif;font-size:4rem;color:var(--gold);
+  direction:rtl;line-height:1.4;margin-bottom:16px;
+  text-shadow:0 2px 20px rgba(212,175,55,.3);
+}
+.about-image-label{color:rgba(255,255,255,.7);font-size:.9rem;font-weight:500}
+.about-badge{
+  position:absolute;bottom:-20px;right:-20px;
+  background:#fff;border-radius:16px;padding:20px 24px;
+  box-shadow:var(--shadow-lg);
+  border:1px solid var(--border);
+  text-align:center;
+}
+.about-badge-num{font-family:'Playfair Display',serif;font-size:2rem;font-weight:700;color:var(--emerald)}
+.about-badge-label{font-size:.75rem;color:var(--text-muted);text-transform:uppercase;letter-spacing:.05em}
+
+.about-content{padding:20px 0}
+.about-points{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin:32px 0}
+.about-point{
+  display:flex;align-items:flex-start;gap:12px;
+  background:var(--bg-light);border-radius:12px;padding:16px;
+}
+.about-point-icon{
+  width:36px;height:36px;border-radius:8px;
+  background:var(--emerald);display:flex;align-items:center;justify-content:center;
+  flex-shrink:0;font-size:1rem;color:#fff;
+}
+.about-point-text{font-size:.85rem;font-weight:600;color:var(--text)}
+
+.timeline{margin-top:32px;display:flex;flex-direction:column;gap:0}
+.timeline-item{display:flex;gap:20px;position:relative;padding-bottom:24px}
+.timeline-item:last-child{padding-bottom:0}
+.timeline-line{
+  display:flex;flex-direction:column;align-items:center;flex-shrink:0;width:20px;
+}
+.timeline-dot{
+  width:20px;height:20px;border-radius:50%;
+  background:var(--emerald);border:3px solid var(--gold);flex-shrink:0;
+}
+.timeline-connector{flex:1;width:2px;background:linear-gradient(var(--emerald),var(--bg-light));margin-top:4px}
+.timeline-item:last-child .timeline-connector{display:none}
+.timeline-body{padding-top:2px}
+.timeline-year{font-size:.75rem;font-weight:700;color:var(--gold-dark);letter-spacing:.06em;text-transform:uppercase}
+.timeline-text{font-size:.88rem;color:var(--text-muted);margin-top:4px}
+
+/* ────────────────────────────────────────────────
+   COURSES
+──────────────────────────────────────────────── */
+.courses-tabs{
+  display:flex;gap:8px;flex-wrap:wrap;justify-content:center;
+  margin-bottom:48px;
+}
+.tab-btn{
+  padding:10px 22px;border-radius:50px;font-size:.88rem;font-weight:600;
+  cursor:pointer;border:2px solid var(--border);background:#fff;
+  color:var(--text-muted);transition:.2s;
+}
+.tab-btn.active,.tab-btn:hover{
+  background:var(--emerald);color:#fff;border-color:var(--emerald);
+}
+
+.course-category{display:none}
+.course-category.active{display:block}
+
+.courses-grid{
+  display:grid;grid-template-columns:repeat(3,1fr);gap:20px;
+}
+.course-card{
+  background:#fff;border-radius:16px;padding:24px;
+  border:1.5px solid var(--border);
+  transition:all .25s;cursor:pointer;
+}
+.course-card:hover{border-color:var(--gold);box-shadow:var(--shadow)}
+.course-card-header{display:flex;align-items:flex-start;justify-content:space-between;margin-bottom:12px}
+.course-badge{
+  font-size:.72rem;font-weight:700;letter-spacing:.06em;
+  text-transform:uppercase;padding:4px 10px;border-radius:50px;
+  background:rgba(15,81,50,.08);color:var(--emerald);
+}
+.course-icon{font-size:1.6rem}
+.course-title{font-family:'Playfair Display',serif;font-size:1rem;font-weight:700;color:var(--emerald);margin-bottom:8px}
+.course-desc{font-size:.82rem;color:var(--text-muted);line-height:1.65;margin-bottom:14px}
+.course-meta{display:flex;gap:12px;flex-wrap:wrap}
+.course-tag{
+  font-size:.72rem;padding:3px 10px;border-radius:20px;
+  background:var(--bg-light);color:var(--text-muted);font-weight:500;
+}
+
+/* ────────────────────────────────────────────────
+   ADMISSION PROCESS
+──────────────────────────────────────────────── */
+.admission-steps{
+  display:grid;grid-template-columns:repeat(4,1fr);gap:0;
+  position:relative;margin-top:64px;
+}
+.admission-step{
+  text-align:center;padding:32px 16px;position:relative;
+}
+.step-connector{
+  position:absolute;top:52px;left:calc(50% + 32px);right:calc(-50% + 32px);
+  height:2px;background:linear-gradient(90deg,var(--emerald),var(--gold));
+  z-index:0;
+}
+.admission-step:last-child .step-connector{display:none}
+.step-num{
+  width:64px;height:64px;border-radius:50%;
+  background:linear-gradient(135deg,var(--emerald),var(--emerald-light));
+  display:flex;align-items:center;justify-content:center;
+  margin:0 auto 20px;
+  font-family:'Playfair Display',serif;font-size:1.4rem;font-weight:700;
+  color:#fff;position:relative;z-index:1;
+  box-shadow:0 4px 20px rgba(15,81,50,.3);
+  border:4px solid var(--gold);
+}
+.step-title{font-family:'Playfair Display',serif;font-size:1.05rem;font-weight:700;color:var(--emerald);margin-bottom:8px}
+.step-desc{font-size:.82rem;color:var(--text-muted);line-height:1.6}
+
+/* ────────────────────────────────────────────────
+   QUOTE SECTION
+──────────────────────────────────────────────── */
+.quote-section{
+  background:linear-gradient(135deg,var(--emerald-dark) 0%,var(--emerald) 100%);
+  padding:80px 0;
+  position:relative;overflow:hidden;
+}
+.quote-bg-pattern{
+  position:absolute;inset:0;opacity:.05;
+  background-image:repeating-linear-gradient(60deg,#fff 0,#fff 1px,transparent 0,transparent 50%);
+  background-size:30px 52px;
+}
+.quote-slider{position:relative;z-index:2;text-align:center;max-width:760px;margin:0 auto;padding:0 24px}
+.quote-arabic{
+  font-family:'Amiri',serif;font-size:2rem;color:var(--gold);
+  direction:rtl;line-height:1.7;margin-bottom:20px;
+}
+.quote-english{
+  font-family:'Playfair Display',serif;font-size:1.3rem;font-style:italic;
+  color:rgba(255,255,255,.9);line-height:1.7;margin-bottom:20px;
+}
+.quote-source{font-size:.82rem;color:rgba(255,255,255,.55);letter-spacing:.06em;text-transform:uppercase}
+.quote-dots{display:flex;gap:8px;justify-content:center;margin-top:32px}
+.quote-dot{
+  width:8px;height:8px;border-radius:50%;
+  background:rgba(255,255,255,.25);cursor:pointer;transition:.2s;border:none;
+}
+.quote-dot.active{background:var(--gold);transform:scale(1.3)}
+
+/* ────────────────────────────────────────────────
+   STUDENTS / TESTIMONIALS
+──────────────────────────────────────────────── */
+.students-grid{
+  display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-top:48px;
+}
+.student-card{
+  background:#fff;border-radius:16px;padding:20px 16px;text-align:center;
+  border:1.5px solid var(--border);transition:.25s;
+}
+.student-card:hover{border-color:var(--gold);box-shadow:var(--shadow);transform:translateY(-4px)}
+.student-avatar{
+  width:56px;height:56px;border-radius:50%;
+  background:linear-gradient(135deg,var(--emerald),var(--emerald-light));
+  display:flex;align-items:center;justify-content:center;
+  margin:0 auto 12px;font-size:1.3rem;color:#fff;font-weight:700;
+  font-family:'Playfair Display',serif;
+}
+.student-name{font-weight:700;font-size:.9rem;color:var(--text);margin-bottom:4px}
+.student-course{font-size:.75rem;color:var(--gold-dark);font-weight:600;
+  background:rgba(212,175,55,.1);padding:3px 10px;border-radius:20px;display:inline-block}
+.student-badge{
+  margin-top:10px;font-size:.7rem;color:var(--emerald);font-weight:600;
+  display:flex;align-items:center;justify-content:center;gap:4px;
+}
+
+/* ────────────────────────────────────────────────
+   CONTACT
+──────────────────────────────────────────────── */
+.contact-grid{display:grid;grid-template-columns:1fr 1.3fr;gap:60px;align-items:start}
+.contact-info h3{font-family:'Playfair Display',serif;font-size:1.8rem;color:var(--emerald);margin-bottom:20px}
+.contact-item{
+  display:flex;align-items:flex-start;gap:16px;
+  margin-bottom:24px;padding:20px;border-radius:12px;background:var(--bg-light);
+}
+.contact-icon{
+  width:44px;height:44px;border-radius:10px;
+  background:var(--emerald);display:flex;align-items:center;justify-content:center;
+  color:#fff;font-size:1.1rem;flex-shrink:0;
+}
+.contact-detail h4{font-weight:700;color:var(--text);margin-bottom:4px;font-size:.95rem}
+.contact-detail p,.contact-detail a{font-size:.88rem;color:var(--text-muted);text-decoration:none}
+.contact-detail a:hover{color:var(--emerald)}
+
+.contact-form{background:#fff;border-radius:24px;padding:40px;border:1.5px solid var(--border);box-shadow:var(--shadow)}
+.contact-form h3{font-family:'Playfair Display',serif;font-size:1.5rem;color:var(--emerald);margin-bottom:28px}
+.form-group{margin-bottom:20px}
+.form-group label{display:block;font-size:.85rem;font-weight:600;color:var(--text);margin-bottom:6px}
+.form-group input,.form-group textarea,.form-group select{
+  width:100%;padding:12px 16px;border-radius:8px;
+  border:1.5px solid var(--border);font-size:.9rem;
+  font-family:'Inter',sans-serif;color:var(--text);
+  transition:.2s;background:#fff;
+}
+.form-group input:focus,.form-group textarea:focus,.form-group select:focus{
+  outline:none;border-color:var(--emerald);box-shadow:0 0 0 3px rgba(15,81,50,.08);
+}
+.form-group textarea{resize:vertical;min-height:120px}
+.form-row{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+
+/* ────────────────────────────────────────────────
+   FOOTER
+──────────────────────────────────────────────── */
+footer{
+  background:var(--emerald-dark);color:rgba(255,255,255,.8);
+  padding:72px 0 0;
+}
+.footer-grid{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:48px;padding-bottom:48px}
+.footer-brand .logo-name{color:#fff;font-size:1.2rem}
+.footer-brand .logo-sub{color:var(--gold)}
+.footer-tagline{font-size:.85rem;color:rgba(255,255,255,.55);margin:16px 0 24px;line-height:1.7;max-width:280px}
+.footer-social{display:flex;gap:10px}
+.social-btn{
+  width:36px;height:36px;border-radius:8px;
+  background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.12);
+  display:flex;align-items:center;justify-content:center;
+  color:rgba(255,255,255,.7);text-decoration:none;font-size:.9rem;
+  transition:.2s;
+}
+.social-btn:hover{background:var(--gold);color:var(--emerald-dark);border-color:var(--gold)}
+.footer-heading{font-size:.8rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--gold);margin-bottom:20px}
+.footer-links{display:flex;flex-direction:column;gap:10px}
+.footer-link{font-size:.85rem;color:rgba(255,255,255,.6);text-decoration:none;transition:.2s}
+.footer-link:hover{color:#fff}
+.footer-bottom{
+  border-top:1px solid rgba(255,255,255,.08);padding:24px 0;
+  display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px;
+}
+.footer-bottom-text{font-size:.78rem;color:rgba(255,255,255,.4)}
+.footer-legal{display:flex;gap:20px}
+.footer-legal a{font-size:.78rem;color:rgba(255,255,255,.4);text-decoration:none}
+.footer-legal a:hover{color:rgba(255,255,255,.7)}
+
+/* ────────────────────────────────────────────────
+   MISC SECTIONS
+──────────────────────────────────────────────── */
+.whatsapp-float{
+  position:fixed;bottom:28px;right:28px;z-index:900;
+  width:60px;height:60px;border-radius:50%;
+  background:#25D366;
+  display:flex;align-items:center;justify-content:center;
+  text-decoration:none;
+  box-shadow:0 8px 32px rgba(37,211,102,.4);
+  animation:pulse-wa 2s ease infinite;
+  transition:.2s;
+}
+.whatsapp-float:hover{transform:scale(1.1);box-shadow:0 12px 40px rgba(37,211,102,.5)}
+.whatsapp-float svg{width:30px;height:30px;fill:#fff}
+@keyframes pulse-wa{
+  0%,100%{box-shadow:0 8px 32px rgba(37,211,102,.4)}
+  50%{box-shadow:0 8px 32px rgba(37,211,102,.6),0 0 0 12px rgba(37,211,102,.08)}
+}
+
+/* Back to top */
+#back-top{
+  position:fixed;bottom:28px;left:28px;z-index:900;
+  width:44px;height:44px;border-radius:10px;
+  background:var(--emerald);border:none;cursor:pointer;
+  display:none;align-items:center;justify-content:center;
+  box-shadow:0 4px 16px rgba(15,81,50,.3);transition:.2s;
+  color:#fff;font-size:1.1rem;
+}
+#back-top:hover{background:var(--emerald-light);transform:translateY(-2px)}
+#back-top.show{display:flex}
+
+/* ANNOUNCEMENT BAR */
+.announce-bar{
+  background:var(--gold);padding:10px 0;text-align:center;
+  font-size:.85rem;font-weight:600;color:var(--emerald-dark);
+}
+.announce-bar a{color:var(--emerald-dark);font-weight:700;text-decoration:underline}
+
+/* Divider */
+.divider{height:1px;background:linear-gradient(90deg,transparent,var(--border),transparent);margin:0}
+
+/* RESPONSIVE */
+@media(max-width:1100px){
+  .features-grid{grid-template-columns:repeat(2,1fr)}
+  .courses-grid{grid-template-columns:repeat(2,1fr)}
+  .footer-grid{grid-template-columns:1fr 1fr}
+  .about-grid{gap:40px}
+}
+@media(max-width:900px){
+  nav,.header-cta .btn-outline-white{display:none}
+  .hamburger{display:flex}
+  .hero-stats-inner{flex-wrap:wrap}
+  .stat-item{border-right:none;border-bottom:1px solid rgba(255,255,255,.1)}
+  .about-grid{grid-template-columns:1fr}
+  .contact-grid{grid-template-columns:1fr}
+  .admission-steps{grid-template-columns:repeat(2,1fr);gap:32px}
+  .step-connector{display:none}
+  .students-grid{grid-template-columns:repeat(3,1fr)}
+}
+@media(max-width:600px){
+  .features-grid{grid-template-columns:1fr}
+  .courses-grid{grid-template-columns:1fr}
+  .students-grid{grid-template-columns:repeat(2,1fr)}
+  .footer-grid{grid-template-columns:1fr}
+  .hero-ctas{flex-direction:column}
+  .hero-ctas .btn{width:100%;justify-content:center}
+  .admission-steps{grid-template-columns:1fr}
+  .form-row{grid-template-columns:1fr}
+  .about-points{grid-template-columns:1fr}
+}
+
+/* Fade-in animation */
+.fade-in{opacity:0;transform:translateY(24px);transition:all .6s ease}
+.fade-in.visible{opacity:1;transform:none}
+
+/* ────────────────────────────────────────────────
+   MODAL / FORM PAGE
+──────────────────────────────────────────────── */
+.modal-overlay{
+  display:none;position:fixed;inset:0;background:rgba(0,0,0,.6);
+  z-index:2000;backdrop-filter:blur(4px);
+  align-items:center;justify-content:center;padding:24px;
+}
+.modal-overlay.open{display:flex}
+.modal-box{
+  background:#fff;border-radius:24px;max-width:680px;width:100%;
+  max-height:90vh;overflow-y:auto;padding:40px;position:relative;
+  box-shadow:0 24px 80px rgba(0,0,0,.2);
+}
+.modal-close{
+  position:absolute;top:20px;right:20px;
+  background:var(--bg-light);border:none;border-radius:8px;
+  width:36px;height:36px;cursor:pointer;font-size:1.1rem;
+  display:flex;align-items:center;justify-content:center;
+}
+.modal-title{font-family:'Playfair Display',serif;font-size:1.6rem;color:var(--emerald);margin-bottom:8px}
+.modal-sub{font-size:.88rem;color:var(--text-muted);margin-bottom:28px}
+.form-step{display:none}
+.form-step.active{display:block}
+.step-indicator{display:flex;gap:8px;margin-bottom:28px}
+.step-ind{
+  flex:1;height:4px;border-radius:2px;background:var(--border);transition:.3s;
+}
+.step-ind.done{background:var(--emerald)}
+.step-ind.active{background:var(--gold)}
+.file-upload{
+  border:2px dashed var(--border);border-radius:12px;padding:28px;
+  text-align:center;cursor:pointer;transition:.2s;
+}
+.file-upload:hover{border-color:var(--emerald);background:var(--bg-light)}
+.file-upload-icon{font-size:2rem;margin-bottom:8px}
+.file-upload-text{font-size:.85rem;color:var(--text-muted)}
+.file-upload input[type=file]{display:none}
+
+/* SUCCESS STATE */
+.success-state{text-align:center;padding:20px 0}
+.success-icon{font-size:4rem;margin-bottom:20px}
+.success-title{font-family:'Playfair Display',serif;font-size:1.8rem;color:var(--emerald);margin-bottom:12px}
+.success-text{color:var(--text-muted);font-size:.95rem;line-height:1.7;margin-bottom:24px}
+.ref-box{
+  background:var(--bg-light);border:2px dashed var(--emerald);
+  border-radius:12px;padding:20px;margin:20px 0;
+}
+.ref-label{font-size:.78rem;text-transform:uppercase;letter-spacing:.06em;color:var(--text-muted)}
+.ref-num{font-family:'Playfair Display',serif;font-size:2rem;color:var(--emerald);font-weight:700}
+
+/* TRACKING */
+.tracking-box{
+  background:var(--bg-light);border-radius:16px;padding:32px;
+  border:1.5px solid var(--border);max-width:520px;margin:0 auto;
+}
+.status-badge{
+  display:inline-flex;align-items:center;gap:8px;
+  padding:8px 20px;border-radius:50px;font-weight:700;font-size:.9rem;
+}
+.status-pending{background:rgba(245,158,11,.1);color:#b45309}
+.status-approved{background:rgba(15,81,50,.1);color:var(--emerald)}
+.status-rejected{background:rgba(239,68,68,.1);color:#b91c1c}
+</style>
+</head>
+<body>
+
+<!-- ANNOUNCE BAR -->
+<div class="announce-bar">
+  🎓 Admissions Open 2024-25 | Online & Offline Programs Available | 
+  <a href="#admission-form">Apply Now →</a>
+</div>
+
+<!-- HEADER -->
+<header id="header">
+  <div class="container">
+    <div class="header-inner">
+      <a href="#" class="logo">
+        <div class="logo-mark">
+          <svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
+            <path d="M16 2L4 8v8c0 7.4 5.2 13.8 12 15.6C23.8 29.8 28 23.4 28 16V8L16 2z"/>
+            <path d="M16 6l-8 4v5.6c0 5.1 3.5 9.5 8 10.9 4.5-1.4 8-5.8 8-10.9V10L16 6z" fill="rgba(212,175,55,.4)"/>
+          </svg>
+        </div>
+        <div class="logo-text">
+          <span class="logo-name">Maulana Arabic Idara</span>
+          <span class="logo-sub">Est. Excellence in Islamic Education</span>
+        </div>
+      </a>
+      <nav>
+        <a href="#" class="nav-link active">Home</a>
+        <a href="#courses" class="nav-link">Courses</a>
+        <a href="#admission-form" class="nav-link">Admission</a>
+        <a href="#tracking" class="nav-link">Track Application</a>
+        <a href="#contact" class="nav-link">Contact</a>
+      </nav>
+      <div class="header-cta">
+        <a href="#admission-form" class="btn btn-gold btn-sm" onclick="openModal()">Apply Now →</a>
+        <button class="hamburger" onclick="toggleMobileNav()" aria-label="Menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- MOBILE NAV -->
+<div class="mobile-nav" id="mobileNav">
+  <button class="mobile-close" onclick="toggleMobileNav()">✕</button>
+  <a href="#" class="nav-link" onclick="toggleMobileNav()">Home</a>
+  <a href="#courses" class="nav-link" onclick="toggleMobileNav()">Courses Offered</a>
+  <a href="#admission-form" class="nav-link" onclick="toggleMobileNav();openModal()">Admission Form</a>
+  <a href="#tracking" class="nav-link" onclick="toggleMobileNav()">Track Application</a>
+  <a href="#contact" class="nav-link" onclick="toggleMobileNav()">Contact Us</a>
+  <a href="#admission-form" class="btn btn-gold" style="margin-top:16px;justify-content:center" onclick="toggleMobileNav();openModal()">Apply Now →</a>
+</div>
+
+<!-- HERO -->
+<section id="hero">
+  <div class="hero-pattern"></div>
+  <div class="hero-geo">
+    <svg viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg" fill="none">
+      <circle cx="200" cy="200" r="180" stroke="white" stroke-width="1"/>
+      <circle cx="200" cy="200" r="140" stroke="white" stroke-width="1"/>
+      <circle cx="200" cy="200" r="100" stroke="white" stroke-width="1"/>
+      <polygon points="200,40 360,280 40,280" stroke="white" stroke-width="1" fill="none"/>
+      <polygon points="200,360 360,120 40,120" stroke="white" stroke-width="1" fill="none"/>
+      <polygon points="40,200 200,40 360,200 200,360" stroke="white" stroke-width="1" fill="none"/>
+      <polygon points="200,20 380,110 380,290 200,380 20,290 20,110" stroke="white" stroke-width=".5" fill="none"/>
+    </svg>
+  </div>
+  <div class="container">
+    <div class="hero-content fade-in visible">
+      <div class="hero-badge">
+        <span>✦ Under the Guidance of Mufti Muhammad Tariq Ansari Qasmi ✦</span>
+      </div>
+      <div class="hero-arabic">بِسْمِ اللهِ الرَّحْمٰنِ الرَّحِيْمِ</div>
+      <h1 class="hero-h1">
+        Empowering Students with<br>
+        <em>Islamic Wisdom,</em> Academic<br>
+        Excellence & Future Success
+      </h1>
+      <p class="hero-sub">
+        Maulana Arabic Idara is dedicated to nurturing students through authentic Islamic education, academic excellence, competitive exam preparation, and career development through both online and offline learning.
+      </p>
+      <div class="hero-ctas">
+        <a href="#admission-form" class="btn btn-gold" onclick="openModal()">
+          <span>Apply for Admission</span>
+          <span>→</span>
+        </a>
+        <a href="#courses" class="btn btn-outline-white">
+          <span>Explore Courses</span>
+        </a>
+      </div>
+      <div class="trust-grid">
+        <div class="trust-item"><div class="trust-check">✓</div><span>Qualified Islamic Scholars</span></div>
+        <div class="trust-item"><div class="trust-check">✓</div><span>Academic Excellence</span></div>
+        <div class="trust-item"><div class="trust-check">✓</div><span>Online &amp; Offline Learning</span></div>
+        <div class="trust-item"><div class="trust-check">✓</div><span>Student Progress Tracking</span></div>
+        <div class="trust-item"><div class="trust-check">✓</div><span>Secure Admission System</span></div>
+      </div>
+    </div>
+  </div>
+  <div class="hero-stats">
+    <div class="container">
+      <div class="hero-stats-inner">
+        <div class="stat-item"><div class="stat-num">500+</div><div class="stat-label">Successful Students</div></div>
+        <div class="stat-item"><div class="stat-num">30+</div><div class="stat-label">Programs Offered</div></div>
+        <div class="stat-item"><div class="stat-num">10+</div><div class="stat-label">Years of Excellence</div></div>
+        <div class="stat-item"><div class="stat-num">4+</div><div class="stat-label">Countries Served</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- QUOTE TICKER -->
+<div class="quote-ticker">
+  <div class="ticker-inner" id="ticker">
+    <div class="ticker-item"><span>🌟</span><span>Seeking knowledge is an obligation upon every Muslim</span><span class="ticker-sep">❖</span></div>
+    <div class="ticker-item"><span>📖</span><span>The best of you are those who learn the Quran and teach it</span><span class="ticker-sep">❖</span></div>
+    <div class="ticker-item"><span>✨</span><span>Knowledge is the life of the mind</span><span class="ticker-sep">❖</span></div>
+    <div class="ticker-item"><span>🕌</span><span>Whoever follows a path to seek knowledge, Allah eases his way to Jannah</span><span class="ticker-sep">❖</span></div>
+    <div class="ticker-item"><span>💫</span><span>Education is the most powerful weapon to change the world</span><span class="ticker-sep">❖</span></div>
+    <!-- duplicated for seamless scroll -->
+    <div class="ticker-item"><span>🌟</span><span>Seeking knowledge is an obligation upon every Muslim</span><span class="ticker-sep">❖</span></div>
+    <div class="ticker-item"><span>📖</span><span>The best of you are those who learn the Quran and teach it</span><span class="ticker-sep">❖</span></div>
+    <div class="ticker-item"><span>✨</span><span>Knowledge is the life of the mind</span><span class="ticker-sep">❖</span></div>
+    <div class="ticker-item"><span>🕌</span><span>Whoever follows a path to seek knowledge, Allah eases his way to Jannah</span><span class="ticker-sep">❖</span></div>
+    <div class="ticker-item"><span>💫</span><span>Education is the most powerful weapon to change the world</span><span class="ticker-sep">❖</span></div>
+  </div>
+</div>
+
+<!-- FEATURES -->
+<section class="section-pad bg-light">
+  <div class="container">
+    <div class="text-center fade-in">
+      <div class="section-eyebrow mx-auto" style="justify-content:center">Why Choose Us</div>
+      <h2 class="section-title">World-Class Islamic Education,<br>Reimagined for the Modern Era</h2>
+      <p class="section-sub mx-auto">We blend centuries of scholarly tradition with modern pedagogical approaches to deliver education that transforms lives.</p>
+    </div>
+    <div class="features-grid">
+      <div class="feature-card fade-in">
+        <div class="feature-icon">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="#0F5132"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 3c1.66 0 3 1.34 3 3s-1.34 3-3 3-3-1.34-3-3 1.34-3 3-3zm0 14.2c-2.5 0-4.71-1.28-6-3.22.03-1.99 4-3.08 6-3.08 1.99 0 5.97 1.09 6 3.08-1.29 1.94-3.5 3.22-6 3.22z"/></svg>
+        </div>
+        <h3 class="feature-title">Qualified Islamic Scholars</h3>
+        <p class="feature-desc">Learn from experienced Muftis, Huffaz, and Ulama who combine deep religious knowledge with modern teaching excellence. Our faculty holds credentials from leading Islamic institutions worldwide.</p>
+      </div>
+      <div class="feature-card fade-in">
+        <div class="feature-icon">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="#0F5132"><path d="M5 13.18v4L12 21l7-3.82v-4L12 17l-7-3.82zM12 3L1 9l11 6 9-4.91V17h2V9L12 3z"/></svg>
+        </div>
+        <h3 class="feature-title">Experienced Academic Teachers</h3>
+        <p class="feature-desc">Our academic faculty brings expertise in CBSE, State Board, and competitive exam preparation. Students consistently excel in national and state-level examinations.</p>
+      </div>
+      <div class="feature-card fade-in">
+        <div class="feature-icon">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="#0F5132"><path d="M20 2H4c-1.1 0-2 .9-2 2v18l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2z"/></svg>
+        </div>
+        <h3 class="feature-title">Online &amp; Offline Learning</h3>
+        <p class="feature-desc">Flexible learning modes designed for students worldwide. Access live classes, recorded lectures, PDF notes, and Google Drive resources anytime, anywhere through our student portal.</p>
+      </div>
+      <div class="feature-card fade-in">
+        <div class="feature-icon">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="#0F5132"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-7 3c1.93 0 3.5 1.57 3.5 3.5S13.93 13 12 13s-3.5-1.57-3.5-3.5S10.07 6 12 6zm7 13H5v-.23c0-.62.28-1.2.76-1.58C7.47 15.82 9.64 15 12 15s4.53.82 6.24 2.19c.48.38.76.97.76 1.58V19z"/></svg>
+        </div>
+        <h3 class="feature-title">Government Exam Preparation</h3>
+        <p class="feature-desc">Comprehensive coaching for UPSC, NEET, JEE, and CET examinations. Our structured programs have helped hundreds of students achieve their career dreams in competitive fields.</p>
+      </div>
+      <div class="feature-card fade-in">
+        <div class="feature-icon">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="#0F5132"><path d="M16 11c1.66 0 2.99-1.34 2.99-3S17.66 5 16 5c-1.66 0-3 1.34-3 3s1.34 3 3 3zm-8 0c1.66 0 2.99-1.34 2.99-3S9.66 5 8 5C6.34 5 5 6.34 5 8s1.34 3 3 3zm0 2c-2.33 0-7 1.17-7 3.5V19h14v-2.5c0-2.33-4.67-3.5-7-3.5zm8 0c-.29 0-.62.02-.97.05 1.16.84 1.97 1.97 1.97 3.45V19h6v-2.5c0-2.33-4.67-3.5-7-3.5z"/></svg>
+        </div>
+        <h3 class="feature-title">Student Progress Tracking</h3>
+        <p class="feature-desc">Real-time dashboards for students and parents to monitor attendance, academic progress, results, fee status, and more. Transparent communication at every stage of the learning journey.</p>
+      </div>
+      <div class="feature-card fade-in">
+        <div class="feature-icon">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="#0F5132"><path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm0 10.99h7c-.53 4.12-3.28 7.79-7 8.94V12H5V6.3l7-3.11v8.8z"/></svg>
+        </div>
+        <h3 class="feature-title">Secure Admission System</h3>
+        <p class="feature-desc">End-to-end encrypted admission workflow with automated reference number generation, document management, payment verification, and downloadable admission receipts with unique IDs.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section class="section-pad" id="about">
+  <div class="container">
+    <div class="about-grid">
+      <div class="about-image-wrap fade-in">
+        <div class="about-image">
+          <div class="about-image-bg"></div>
+          <div class="about-image-content">
+            <div class="about-arabic-large">عِلْمٌ وَعَمَل</div>
+            <div class="about-image-label" style="color:rgba(255,255,255,.7);font-size:1rem">Knowledge &amp; Action</div>
+            <div style="margin-top:28px;display:flex;gap:20px;justify-content:center">
+              <div style="text-align:center">
+                <div style="font-family:'Playfair Display',serif;font-size:1.6rem;font-weight:700;color:var(--gold)">500+</div>
+                <div style="font-size:.7rem;color:rgba(255,255,255,.6);text-transform:uppercase">Students</div>
+              </div>
+              <div style="width:1px;background:rgba(255,255,255,.15)"></div>
+              <div style="text-align:center">
+                <div style="font-family:'Playfair Display',serif;font-size:1.6rem;font-weight:700;color:var(--gold)">30+</div>
+                <div style="font-size:.7rem;color:rgba(255,255,255,.6);text-transform:uppercase">Courses</div>
+              </div>
+              <div style="width:1px;background:rgba(255,255,255,.15)"></div>
+              <div style="text-align:center">
+                <div style="font-family:'Playfair Display',serif;font-size:1.6rem;font-weight:700;color:var(--gold)">10+</div>
+                <div style="font-size:.7rem;color:rgba(255,255,255,.6);text-transform:uppercase">Years</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="about-badge">
+          <div class="about-badge-num">Damat Barakatuhum</div>
+          <div class="about-badge-label">Mufti Muhammad Tariq Ansari Qasmi</div>
+        </div>
+      </div>
+      <div class="about-content fade-in">
+        <div class="section-eyebrow">About the Idara</div>
+        <h2 class="section-title">A Tradition of Knowledge, Excellence &amp; Character Building</h2>
+        <p style="color:var(--text-muted);line-height:1.8;margin-bottom:16px">
+          Under the distinguished guidance of <strong>Mufti Muhammad Tariq Ansari Qasmi (Damat Barakatuhum)</strong>, Maulana Arabic Idara stands as a beacon of authentic Islamic education combined with modern academic excellence.
+        </p>
+        <p style="color:var(--text-muted);line-height:1.8">
+          Our institution bridges the timeless wisdom of classical Islamic scholarship with the demands of contemporary education, preparing students to excel spiritually, academically, and professionally in today's world.
+        </p>
+        <div class="about-points">
+          <div class="about-point"><div class="about-point-icon">☪️</div><div class="about-point-text">Islamic Values &amp; Character</div></div>
+          <div class="about-point"><div class="about-point-icon">📚</div><div class="about-point-text">Academic Excellence</div></div>
+          <div class="about-point"><div class="about-point-icon">🎯</div><div class="about-point-text">Career Preparation</div></div>
+          <div class="about-point"><div class="about-point-icon">💻</div><div class="about-point-text">Digital Learning</div></div>
+          <div class="about-point"><div class="about-point-icon">🌍</div><div class="about-point-text">Global Community</div></div>
+          <div class="about-point"><div class="about-point-icon">🏆</div><div class="about-point-text">Student Development</div></div>
+        </div>
+        <div class="timeline">
+          <div class="timeline-item">
+            <div class="timeline-line"><div class="timeline-dot"></div><div class="timeline-connector"></div></div>
+            <div class="timeline-body"><div class="timeline-year">Foundation</div><div class="timeline-text">Established with a mission to provide authentic Islamic education rooted in the Dars-e-Nizami tradition.</div></div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-line"><div class="timeline-dot"></div><div class="timeline-connector"></div></div>
+            <div class="timeline-body"><div class="timeline-year">Expansion</div><div class="timeline-text">Expanded to include CBSE, State Board tuition, and competitive exam preparation alongside Islamic studies.</div></div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-line"><div class="timeline-dot"></div><div class="timeline-connector"></div></div>
+            <div class="timeline-body"><div class="timeline-year">Digital Era</div><div class="timeline-text">Launched online learning platform enabling students from Malaysia, Indonesia, USA, and South Africa to benefit.</div></div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-line"><div class="timeline-dot"></div></div>
+            <div class="timeline-body"><div class="timeline-year">Today</div><div class="timeline-text">Serving 500+ students across 4+ countries with 30+ programs, continuing to grow in excellence and impact.</div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- COURSES -->
+<section class="section-pad bg-light" id="courses">
+  <div class="container">
+    <div class="text-center fade-in">
+      <div class="section-eyebrow mx-auto" style="justify-content:center">Our Programs</div>
+      <h2 class="section-title">Courses Offered</h2>
+      <p class="section-sub mx-auto">From classical Islamic sciences to modern competitive exam preparation — we offer comprehensive education for every student.</p>
+    </div>
+    <div class="courses-tabs" style="margin-top:40px">
+      <button class="tab-btn active" onclick="showCat('islamic')">Islamic Studies</button>
+      <button class="tab-btn" onclick="showCat('cbse')">CBSE Tuition</button>
+      <button class="tab-btn" onclick="showCat('state')">State Board</button>
+      <button class="tab-btn" onclick="showCat('competitive')">Competitive Exams</button>
+      <button class="tab-btn" onclick="showCat('open')">Open Schooling</button>
+      <button class="tab-btn" onclick="showCat('intl')">International</button>
+    </div>
+    <!-- ISLAMIC -->
+    <div class="course-category active" id="cat-islamic">
+      <div class="courses-grid">
+        <div class="course-card"><div class="course-card-header"><span class="course-badge">Quran</span><span class="course-icon">📖</span></div><h3 class="course-title">Nazra Quran Course</h3><p class="course-desc">Foundation course enabling students to read the Holy Quran with correct pronunciation. Ideal for beginners of all ages.</p><div class="course-meta"><span class="course-tag">All Ages</span><span class="course-tag">Beginner</span><span class="course-tag">Certificate</span></div></div>
+        <div class="course-card"><div class="course-card-header"><span class="course-badge">Quran</span><span class="course-icon">🎵</span></div><h3 class="course-title">Tajweed Quran Course</h3><p class="course-desc">Master the rules of Tajweed for proper recitation. Learn makharij, sifat, and all recitation rules from qualified teachers.</p><div class="course-meta"><span class="course-tag">Intermediate</span><span class="course-tag">Certificate</span></div></div>
+        <div class="course-card"><div class="course-card-header"><span class="course-badge">Hifz</span><span class="course-icon">⭐</span></div><h3 class="course-title">Hifz-e-Quran Course</h3><p class="course-desc">Complete memorization of the Holy Quran under expert Huffaz. Structured program with daily revision and progress tracking.</p><div class="course-meta"><span class="course-tag">Full-time</span><span class="course-tag">Ijaazah</span></div></div>
+        <div class="course-card"><div class="course-card-header"><span class="course-badge">Advanced</span><span class="course-icon">📜</span></div><h3 class="course-title">Tafseer-e-Quran Course</h3><p class="course-desc">In-depth Quranic exegesis study covering classical and contemporary tafseer works. Understand the profound meanings of divine revelation.</p><div class="course-meta"><span class="course-tag">Advanced</span><span class="course-tag">Arabic</span></div></div>
+        <div class="course-card"><div class="course-card-header"><span class="course-badge">Deeniyat</span><span class="course-icon">🌙</span></div><h3 class="course-title">Deeniyat — 3 Years</h3><p class="course-desc">Comprehensive Islamic education covering Fiqh, Aqeedah, Hadith, and Seerah. Perfect for students seeking solid religious grounding.</p><div class="course-meta"><span class="course-tag">3 Years</span><span class="course-tag">Certificate</span></div></div>
+        <div class="course-card"><div class="course-card-header"><span class="course-badge">Deeniyat</span><span class="course-icon">🌙</span></div><h3 class="course-title">Deeniyat — 5 Years</h3><p class="course-desc">Extended Deeniyat program with deeper coverage of Islamic sciences, Arabic language, and character development.</p><div class="course-meta"><span class="course-tag">5 Years</span><span class="course-tag">Diploma</span></div></div>
+        <div class="course-card"><div class="course-card-header"><span class="course-badge">Aalimiyat</span><span class="course-icon">🎓</span></div><h3 class="course-title">Aalimiyat — 3 Years</h3><p class="course-desc">Accelerated Aalim course covering core Dars-e-Nizami subjects. For students with prior Islamic education background.</p><div class="course-meta"><span class="course-tag">3 Years</span><span class="course-tag">Sanad</span></div></div>
+        <div class="course-card"><div class="course-card-header"><span class="course-badge">Aalimiyat</span><span class="course-icon">🎓</span></div><h3 class="course-title">Aalimiyat — 6 Years (Complete Dars-e-Nizami)</h3><p class="course-desc">The complete traditional Dars-e-Nizami curriculum spanning 6 years. Graduates earn the status of Aalim with comprehensive Islamic knowledge.</p><div class="course-meta"><span class="course-tag">6 Years</span><span class="course-tag">Sanad</span><span class="course-tag">Premium</span></div></div>
+        <div class="course-card"><div class="course-card-header"><span class="course-badge">Fiqh</span><span class="course-icon">⚖️</span></div><h3 class="course-title">Fiqh Hanafi Course</h3><p class="course-desc">Specialized course in Hanafi jurisprudence covering rulings of worship, transactions, family law, and contemporary issues.</p><div class="course-meta"><span class="course-tag">Hanafi</span><span class="course-tag">Certificate</span></div></div>
+        <div class="course-card"><div class="course-card-header"><span class="course-badge">Fiqh</span><span class="course-icon">⚖️</span></div><h3 class="course-title">Fiqh Shafi Course</h3><p class="course-desc">Comprehensive study of Shafi jurisprudence with focus on classical texts and their contemporary application.</p><div class="course-meta"><span class="course-tag">Shafi</span><span class="course-tag">Certificate</span></div></div>
+        <div class="course-card"><div class="course-card-header"><span class="course-badge">Language</span><span class="course-icon">🗣️</span></div><h3 class="course-title">Arabic Language Course</h3><p class="course-desc">Modern and classical Arabic language from beginner to advanced level. Grammar, conversation, reading, and writing skills.</p><div class="course-meta"><span class="course-tag">All Levels</span><span class="course-tag">Online</span></div></div>
+        <div class="course-card"><div class="course-card-header"><span class="course-badge">Mufti</span><span class="course-icon">🏅</span></div><h3 class="course-title">Takmeel-e-Ifta (Mufti Course)</h3><p class="course-desc">Post-Aalim specialization in Islamic legal opinion (Fatwa) writing. Advanced study of usul al-fiqh, comparative jurisprudence, and fatwa methodology.</p><div class="course-meta"><span class="course-tag">Post-Aalim</span><span class="course-tag">1-2 Years</span></div></div>
+        <div class="course-card"><div class="course-card-header"><span class="course-badge">Hadith</span><span class="course-icon">📗</span></div><h3 class="course-title">Muhaddith Course</h3><p class="course-desc">Advanced Hadith sciences including ilm al-rijal, mustalah al-hadith, and in-depth study of the six major hadith collections.</p><div class="course-meta"><span class="course-tag">Advanced</span><span class="course-tag">Ijaazah</span></div></div>
+      </div>
+    </div>
+    <!-- CBSE -->
+    <div class="course-category" id="cat-cbse">
+      <div class="courses-grid">
+        <div class="course-card"><div class="course-card-header"><span class="course-badge">CBSE</span><span class="course-icon">📐</span></div><h3 class="course-title">8th Standard Tuition</h3><p class="course-desc">Foundation year tuition covering all CBSE subjects with focus on conceptual understanding and exam preparation.</p><div class="course-meta"><span class="course-tag">All Subjects</span><span class="course-tag">Online/Offline</span></div></div>
+        <div class="course-card"><div class="course-card-header"><span class="course-badge">CBSE</span><span class="course-icon">📐</span></div><h3 class="course-title">9th Standard Tuition</h3><p class="course-desc">Comprehensive 9th grade coaching with emphasis on Science and Mathematics to build strong secondary school foundations.</p><div class="course-meta"><span class="course-tag">All Subjects</span><span class="course-tag">Board Prep</span></div></div>
+        <div class="course-card"><div class="course-card-header"><span class="course-badge">CBSE</span><span class="course-icon">📐</span></div><h3 class="course-title">10th Standard Tuition</h3><p class="course-desc">Intensive 10th board exam preparation. Mock tests, previous papers, and personalized attention for top scores.</p><div class="course-meta"><span class="course-tag">Board Exam</span><span class="course-tag">Mock Tests</span></div></div>
+        <div class="course-card"><div class="course-card-header"><span class="course-badge">CBSE</span><span class="course-icon">📐</span></div><h3 class="course-title">11th Standard Tuition</h3><p class="course-desc">Science, Commerce, and Arts stream coaching with competitive exam integration for JEE, NEET, and professional courses.</p><div class="course-meta"><span class="course-tag">All Streams</span><span class="course-tag">Competitive</span></div></div>
+        <div class="course-card"><div class="course-card-header"><span class="course-badge">CBSE</span><span class="course-icon">📐</span></div><h3 class="course-title">12th Standard Tuition</h3><p class="course-desc">Final year board exam coaching with career guidance. Proven track record of students achieving 90%+ scores in boards.</p><div class="course-meta"><span class="course-tag">Board Exam</span><span class="course-tag">Career Guidance</span></div></div>
+      </div>
+    </div>
+    <!-- STATE -->
+    <div class="course-category" id="cat-state">
+      <div class="courses-grid">
+        <div class="course-card"><div class="course-card-header"><span class="course-badge">State Board</span><span class="course-icon">🏫</span></div><h3 class="course-title">8th Standard</h3><p class="course-desc">State board curriculum coaching covering all subjects with regional language support and personalized learning plans.</p><div class="course-meta"><span class="course-tag">All Subjects</span><span class="course-tag">Regional</span></div></div>
+        <div class="course-card"><div class="course-card-header"><span class="course-badge">State Board</span><span class="course-icon">🏫</span></div><h3 class="course-title">9th Standard</h3><p class="course-desc">Comprehensive state board 9th grade tuition with regular assessments and parent progress updates.</p><div class="course-meta"><span class="course-tag">All Subjects</span></div></div>
+        <div class="course-card"><div class="course-card-header"><span class="course-badge">State Board</span><span class="course-icon">🏫</span></div><h3 class="course-title">10th Standard</h3><p class="course-desc">Board exam preparation with extensive practice, topic-wise tests, and proven scoring strategies.</p><div class="course-meta"><span class="course-tag">Board Exam</span><span class="course-tag">Mock Tests</span></div></div>
+        <div class="course-card"><div class="course-card-header"><span class="course-badge">State Board</span><span class="course-icon">🏫</span></div><h3 class="course-title">11th Standard</h3><p class="course-desc">Stream-wise coaching aligned with state board syllabus and integrated with professional career pathways.</p><div class="course-meta"><span class="course-tag">All Streams</span></div></div>
+        <div class="course-card"><div class="course-card-header"><span class="course-badge">State Board</span><span class="course-icon">🏫</span></div><h3 class="course-title">12th Standard</h3><p class="course-desc">Final year intensive preparation with exam strategy workshops and university application guidance.</p><div class="course-meta"><span class="course-tag">Board Exam</span><span class="course-tag">University Prep</span></div></div>
+      </div>
+    </div>
+    <!-- COMPETITIVE -->
+    <div class="course-category" id="cat-competitive">
+      <div class="courses-grid">
+        <div class="course-card"><div class="course-card-header"><span class="course-badge">Civil Services</span><span class="course-icon">🏛️</span></div><h3 class="course-title">UPSC Preparation</h3><p class="course-desc">Comprehensive IAS/IPS exam coaching covering Prelims, Mains, and Interview. Expert faculty, daily current affairs, and rigorous test series.</p><div class="course-meta"><span class="course-tag">2-3 Years</span><span class="course-tag">Complete</span></div></div>
+        <div class="course-card"><div class="course-card-header"><span class="course-badge">Medical</span><span class="course-icon">🏥</span></div><h3 class="course-title">NEET Preparation</h3><p class="course-desc">Medical entrance exam coaching with Biology, Physics, and Chemistry focus. Chapter-wise tests and full mock exams aligned with NTA patterns.</p><div class="course-meta"><span class="course-tag">1-2 Years</span><span class="course-tag">NTA Pattern</span></div></div>
+        <div class="course-card"><div class="course-card-header"><span class="course-badge">Engineering</span><span class="course-icon">⚙️</span></div><h3 class="course-title">JEE Preparation</h3><p class="course-desc">Joint Entrance Examination coaching for IIT and NIT aspirants. Advanced Mathematics, Physics, and Chemistry with problem-solving workshops.</p><div class="course-meta"><span class="course-tag">1-2 Years</span><span class="course-tag">IIT/NIT</span></div></div>
+        <div class="course-card"><div class="course-card-header"><span class="course-badge">State Exam</span><span class="course-icon">📋</span></div><h3 class="course-title">CET Preparation</h3><p class="course-desc">State Common Entrance Test preparation covering all relevant subjects and state-specific exam patterns for various professional courses.</p><div class="course-meta"><span class="course-tag">State Level</span><span class="course-tag">Professional</span></div></div>
+      </div>
+    </div>
+    <!-- OPEN -->
+    <div class="course-category" id="cat-open">
+      <div class="courses-grid">
+        <div class="course-card"><div class="course-card-header"><span class="course-badge">Open School</span><span class="course-icon">🎒</span></div><h3 class="course-title">10th Open Schooling (NIOS)</h3><p class="course-desc">NIOS secondary certificate program for students who couldn't attend regular schools. Flexible study with expert guidance.</p><div class="course-meta"><span class="course-tag">NIOS</span><span class="course-tag">Flexible</span></div></div>
+        <div class="course-card"><div class="course-card-header"><span class="course-badge">Open School</span><span class="course-icon">🎒</span></div><h3 class="course-title">12th Open Schooling (NIOS)</h3><p class="course-desc">Senior secondary open schooling with all streams available. Recognized by all universities and higher education institutions.</p><div class="course-meta"><span class="course-tag">NIOS</span><span class="course-tag">All Streams</span></div></div>
+        <div class="course-card"><div class="course-card-header"><span class="course-badge">Degree</span><span class="course-icon">🏛️</span></div><h3 class="course-title">Degree Through Open University</h3><p class="course-desc">Guidance and support for earning UG and PG degrees through open universities like IGNOU. Subject coaching and exam preparation included.</p><div class="course-meta"><span class="course-tag">IGNOU</span><span class="course-tag">Degree</span><span class="course-tag">Government Job</span></div></div>
+        <div class="course-card"><div class="course-card-header"><span class="course-badge">Govt Jobs</span><span class="course-icon">🏢</span></div><h3 class="course-title">Government Job Preparation</h3><p class="course-desc">Specialized coaching for bank exams, SSC, Railways, and state government job examinations with aptitude, reasoning, and GK focus.</p><div class="course-meta"><span class="course-tag">SSC</span><span class="course-tag">Banking</span><span class="course-tag">Railways</span></div></div>
+      </div>
+    </div>
+    <!-- INTERNATIONAL -->
+    <div class="course-category" id="cat-intl">
+      <div class="courses-grid">
+        <div class="course-card"><div class="course-card-header"><span class="course-badge">Malaysia</span><span class="course-icon">🇲🇾</span></div><h3 class="course-title">Malaysia — Form 3, 4, 5, 6</h3><p class="course-desc">Online tuition following Malaysian national curriculum (SPM &amp; STPM). Expert teachers familiar with KSSM syllabus and exam formats.</p><div class="course-meta"><span class="course-tag">SPM/STPM</span><span class="course-tag">Online</span></div></div>
+        <div class="course-card"><div class="course-card-header"><span class="course-badge">Indonesia</span><span class="course-icon">🇮🇩</span></div><h3 class="course-title">Indonesia — SMA</h3><p class="course-desc">Sekolah Menengah Atas curriculum support. Subject-specific coaching covering core sciences, mathematics, and Bahasa Indonesia.</p><div class="course-meta"><span class="course-tag">SMA</span><span class="course-tag">Online</span></div></div>
+        <div class="course-card"><div class="course-card-header"><span class="course-badge">USA</span><span class="course-icon">🇺🇸</span></div><h3 class="course-title">United States — All High School Years</h3><p class="course-desc">Academic support for American high school students (Freshman through Senior). SAT/ACT prep, AP subjects, and college application guidance.</p><div class="course-meta"><span class="course-tag">SAT/ACT</span><span class="course-tag">AP Courses</span><span class="course-tag">Online</span></div></div>
+        <div class="course-card"><div class="course-card-header"><span class="course-badge">South Africa</span><span class="course-icon">🇿🇦</span></div><h3 class="course-title">South Africa — Grade 9–12</h3><p class="course-desc">NSC and IEB curriculum tuition for South African students. Matric exam preparation with subject specialists in all major streams.</p><div class="course-meta"><span class="course-tag">NSC/IEB</span><span class="course-tag">Matric Prep</span><span class="course-tag">Online</span></div></div>
+      </div>
+    </div>
+    <div style="text-align:center;margin-top:48px">
+      <a href="#admission-form" class="btn btn-emerald" onclick="openModal()">Apply for Any Course →</a>
+    </div>
+  </div>
+</section>
+
+<!-- ADMISSION PROCESS -->
+<section class="section-pad" id="admission">
+  <div class="container">
+    <div class="text-center fade-in">
+      <div class="section-eyebrow mx-auto" style="justify-content:center">How It Works</div>
+      <h2 class="section-title">Your Admission Journey</h2>
+      <p class="section-sub mx-auto">A simple, transparent 4-step process to begin your educational journey with Maulana Arabic Idara.</p>
+    </div>
+    <div class="admission-steps fade-in">
+      <div class="admission-step">
+        <div class="step-connector"></div>
+        <div class="step-num">1</div>
+        <h3 class="step-title">Submit Admission Form</h3>
+        <p class="step-desc">Fill out the online admission form with your details, course selection, and payment proof. Upload required documents securely.</p>
+      </div>
+      <div class="admission-step">
+        <div class="step-connector"></div>
+        <div class="step-num">2</div>
+        <h3 class="step-title">Application Review</h3>
+        <p class="step-desc">Our admin team reviews your application, verifies submitted documents, and evaluates your eligibility within 2-3 working days.</p>
+      </div>
+      <div class="admission-step">
+        <div class="step-connector"></div>
+        <div class="step-num">3</div>
+        <h3 class="step-title">Reference Number</h3>
+        <p class="step-desc">Upon approval, a unique Reference Number is generated and communicated to you via WhatsApp and your student dashboard.</p>
+      </div>
+      <div class="admission-step">
+        <div class="step-num">4</div>
+        <h3 class="step-title">Course Enrollment</h3>
+        <p class="step-desc">Use your Reference Number to complete course enrollment, receive your Student ID, Login credentials, and begin learning!</p>
+      </div>
+    </div>
+    <div style="text-align:center;margin-top:56px">
+      <a href="#admission-form" class="btn btn-gold" onclick="openModal()">Start Your Application →</a>
+    </div>
+  </div>
+</section>
+
+<!-- QUOTE SECTION -->
+<div class="quote-section">
+  <div class="quote-bg-pattern"></div>
+  <div class="quote-slider">
+    <div class="quote-item" id="quote-display">
+      <div class="quote-arabic" id="qa">اقْرَأْ بِاسْمِ رَبِّكَ الَّذِي خَلَقَ</div>
+      <p class="quote-english" id="qe">"Read in the name of your Lord who created."</p>
+      <div class="quote-source" id="qs">— Al-Quran, Surah Al-Alaq 96:1</div>
+    </div>
+    <div class="quote-dots" id="qdots"></div>
+  </div>
+</div>
+
+<!-- SUCCESSFUL STUDENTS -->
+<section class="section-pad bg-light" id="students">
+  <div class="container">
+    <div class="text-center fade-in">
+      <div class="section-eyebrow mx-auto" style="justify-content:center">Our Alumni</div>
+      <h2 class="section-title">Successful Students</h2>
+      <p class="section-sub mx-auto">Hundreds of students have transformed their lives through our programs. Here are some of our proud graduates.</p>
+    </div>
+    <div class="students-grid fade-in">
+      <div class="student-card"><div class="student-avatar">S</div><div class="student-name">Saadia</div><div class="student-course">Deeniyat Course</div><div class="student-badge">✓ Completed</div></div>
+      <div class="student-card"><div class="student-avatar">S</div><div class="student-name">Sumaira</div><div class="student-course">Deeniyat Course</div><div class="student-badge">✓ Completed</div></div>
+      <div class="student-card"><div class="student-avatar">W</div><div class="student-name">Wseela</div><div class="student-course">Deeniyat Course</div><div class="student-badge">✓ Completed</div></div>
+      <div class="student-card"><div class="student-avatar">A</div><div class="student-name">Afroza</div><div class="student-course">Deeniyat Course</div><div class="student-badge">✓ Completed</div></div>
+      <div class="student-card"><div class="student-avatar">M</div><div class="student-name">Momina</div><div class="student-course">Deeniyat Course</div><div class="student-badge">✓ Completed</div></div>
+      <div class="student-card"><div class="student-avatar">S</div><div class="student-name">Sajeela</div><div class="student-course">Deeniyat Course</div><div class="student-badge">✓ Completed</div></div>
+      <div class="student-card"><div class="student-avatar">T</div><div class="student-name">Tanzeela</div><div class="student-course">Deeniyat Course</div><div class="student-badge">✓ Completed</div></div>
+      <div class="student-card"><div class="student-avatar">S</div><div class="student-name">Swaliha</div><div class="student-course">Deeniyat Course</div><div class="student-badge">✓ Completed</div></div>
+      <div class="student-card"><div class="student-avatar">Z</div><div class="student-name">Zainab</div><div class="student-course">Deeniyat Course</div><div class="student-badge">✓ Completed</div></div>
+      <div class="student-card"><div class="student-avatar">A</div><div class="student-name">Ayeza</div><div class="student-course">Alima Course</div><div class="student-badge">✓ Completed</div></div>
+      <div class="student-card"><div class="student-avatar">S</div><div class="student-name">Saniya Meraj</div><div class="student-course">Alima Course</div><div class="student-badge">✓ Completed</div></div>
+      <div class="student-card"><div class="student-avatar">N</div><div class="student-name">Nargis Perween</div><div class="student-course">Alima Course</div><div class="student-badge">✓ Completed</div></div>
+      <div class="student-card"><div class="student-avatar">F</div><div class="student-name">Feroza</div><div class="student-course">Alima Course</div><div class="student-badge">✓ Completed</div></div>
+      <div class="student-card"><div class="student-avatar">S</div><div class="student-name">Sidra</div><div class="student-course">Hifz-e-Quran</div><div class="student-badge">✓ Hafiza</div></div>
+      <div class="student-card"><div class="student-avatar">A</div><div class="student-name">Ansa Nazeer</div><div class="student-course">Hifz-e-Quran</div><div class="student-badge">✓ Hafiza</div></div>
+      <div class="student-card"><div class="student-avatar">R</div><div class="student-name">Rasheeda Zuhaib</div><div class="student-course">Hifz-e-Quran</div><div class="student-badge">✓ Hafiza</div></div>
+    </div>
+    <div style="text-align:center;margin-top:32px;color:var(--text-muted);font-size:.95rem;font-style:italic">
+      And many more successful students... 🌟 Join the family of 500+ graduates!
+    </div>
+  </div>
+</section>
+
+<!-- TRACKING SECTION -->
+<section class="section-pad" id="tracking">
+  <div class="container">
+    <div class="text-center fade-in" style="margin-bottom:48px">
+      <div class="section-eyebrow mx-auto" style="justify-content:center">Application Status</div>
+      <h2 class="section-title">Track Your Application</h2>
+      <p class="section-sub mx-auto">Check the status of your admission or enrollment application instantly using your registered mobile number or reference number.</p>
+    </div>
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:32px;max-width:900px;margin:0 auto">
+      <div class="tracking-box fade-in">
+        <h3 style="font-family:'Playfair Display',serif;color:var(--emerald);font-size:1.2rem;margin-bottom:20px">📱 Track Admission</h3>
+        <div class="form-group">
+          <label>Registered Mobile Number</label>
+          <input type="tel" placeholder="Enter your mobile number" id="track-phone" maxlength="10">
+        </div>
+        <button class="btn btn-emerald" style="width:100%;justify-content:center" onclick="trackAdmission()">Check Status</button>
+        <div id="admission-result" style="margin-top:20px;display:none"></div>
+      </div>
+      <div class="tracking-box fade-in">
+        <h3 style="font-family:'Playfair Display',serif;color:var(--emerald);font-size:1.2rem;margin-bottom:20px">🔖 Track Enrollment</h3>
+        <div class="form-group">
+          <label>Reference Number</label>
+          <input type="text" placeholder="Enter your Reference Number" id="track-ref">
+        </div>
+        <button class="btn btn-emerald" style="width:100%;justify-content:center" onclick="trackEnrollment()">Check Enrollment</button>
+        <div id="enrollment-result" style="margin-top:20px;display:none"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="section-pad bg-light" id="contact">
+  <div class="container">
+    <div class="text-center fade-in" style="margin-bottom:64px">
+      <div class="section-eyebrow mx-auto" style="justify-content:center">Get in Touch</div>
+      <h2 class="section-title">Contact Us</h2>
+      <p class="section-sub mx-auto">We're here to answer your questions. Reach out through WhatsApp, email, or our contact form.</p>
+    </div>
+    <div class="contact-grid fade-in">
+      <div class="contact-info">
+        <h3>We'd Love to Hear From You</h3>
+        <p style="color:var(--text-muted);margin-bottom:28px;line-height:1.75">Whether you have questions about courses, admissions, fees, or any other matter — our team is ready to help guide you.</p>
+        <div class="contact-item">
+          <div class="contact-icon">📱</div>
+          <div class="contact-detail">
+            <h4>WhatsApp / Phone</h4>
+            <a href="https://wa.me/919560386360">+91 95603 86360</a>
+          </div>
+        </div>
+        <div class="contact-item">
+          <div class="contact-icon">🕐</div>
+          <div class="contact-detail">
+            <h4>Working Hours</h4>
+            <p>Saturday – Thursday: 9:00 AM – 9:00 PM<br>Friday: 10:00 AM – 12:00 PM, 2:00 PM – 9:00 PM</p>
+          </div>
+        </div>
+        <div class="contact-item">
+          <div class="contact-icon">📧</div>
+          <div class="contact-detail">
+            <h4>Email</h4>
+            <a href="mailto:info@maulanarabicidara.com">info@maulanarabicidara.com</a>
+          </div>
+        </div>
+        <div style="margin-top:24px;background:#e8f5e9;border-radius:12px;padding:20px;border-left:4px solid var(--emerald)">
+          <h4 style="color:var(--emerald);margin-bottom:8px;font-size:.95rem">💬 Quick WhatsApp</h4>
+          <p style="font-size:.85rem;color:var(--text-muted);margin-bottom:12px">For fastest response, contact us directly on WhatsApp</p>
+          <a href="https://wa.me/919560386360?text=Assalamualaikum%2C%20I%20would%20like%20to%20inquire%20about%20admissions%20at%20Maulana%20Arabic%20Idara." class="btn btn-emerald btn-sm" target="_blank">Open WhatsApp Chat →</a>
+        </div>
+      </div>
+      <div class="contact-form fade-in">
+        <h3>Send an Inquiry</h3>
+        <div class="form-row">
+          <div class="form-group"><label>Full Name *</label><input type="text" placeholder="Your full name" required></div>
+          <div class="form-group"><label>Mobile Number *</label><input type="tel" placeholder="Your mobile number" required></div>
+        </div>
+        <div class="form-group"><label>Email Address</label><input type="email" placeholder="your@email.com"></div>
+        <div class="form-group">
+          <label>Course of Interest</label>
+          <select>
+            <option value="">Select a course...</option>
+            <option>Nazra Quran Course</option>
+            <option>Hifz-e-Quran Course</option>
+            <option>Deeniyat (3 Years)</option>
+            <option>Aalimiyat (6 Years)</option>
+            <option>Arabic Language Course</option>
+            <option>Takmeel-e-Ifta (Mufti Course)</option>
+            <option>CBSE Tuition</option>
+            <option>State Board Tuition</option>
+            <option>UPSC Preparation</option>
+            <option>NEET Preparation</option>
+            <option>Other</option>
+          </select>
+        </div>
+        <div class="form-group"><label>Your Message *</label><textarea placeholder="Tell us how we can help you..." required></textarea></div>
+        <button class="btn btn-emerald" style="width:100%;justify-content:center" type="button" onclick="submitContact(this)">Send Message →</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <div class="logo" style="margin-bottom:16px">
+          <div class="logo-mark"><svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg"><path d="M16 2L4 8v8c0 7.4 5.2 13.8 12 15.6C23.8 29.8 28 23.4 28 16V8L16 2z"/></svg></div>
+          <div class="logo-text"><span class="logo-name" style="color:#fff">Maulana Arabic Idara</span><span class="logo-sub">Excellence in Islamic Education</span></div>
+        </div>
+        <p class="footer-tagline">Under the guidance of Mufti Muhammad Tariq Ansari Qasmi (Damat Barakatuhum). Empowering minds through authentic Islamic knowledge and academic excellence since our founding.</p>
+        <div class="footer-social">
+          <a href="https://wa.me/919560386360" class="social-btn" target="_blank" title="WhatsApp">💬</a>
+          <a href="#" class="social-btn" title="YouTube">▶</a>
+          <a href="#" class="social-btn" title="Facebook">f</a>
+          <a href="#" class="social-btn" title="Instagram">📷</a>
+        </div>
+      </div>
+      <div>
+        <div class="footer-heading">Quick Links</div>
+        <div class="footer-links">
+          <a href="#" class="footer-link">Home</a>
+          <a href="#courses" class="footer-link">Courses Offered</a>
+          <a href="#admission-form" class="footer-link" onclick="openModal()">Admission Form</a>
+          <a href="#tracking" class="footer-link">Track Application</a>
+          <a href="#about" class="footer-link">About Us</a>
+          <a href="#contact" class="footer-link">Contact Us</a>
+        </div>
+      </div>
+      <div>
+        <div class="footer-heading">Islamic Programs</div>
+        <div class="footer-links">
+          <a href="#courses" class="footer-link" onclick="showCat('islamic')">Quran Courses</a>
+          <a href="#courses" class="footer-link" onclick="showCat('islamic')">Hifz-e-Quran</a>
+          <a href="#courses" class="footer-link" onclick="showCat('islamic')">Aalimiyat</a>
+          <a href="#courses" class="footer-link" onclick="showCat('islamic')">Mufti Course</a>
+          <a href="#courses" class="footer-link" onclick="showCat('islamic')">Arabic Language</a>
+          <a href="#courses" class="footer-link" onclick="showCat('islamic')">Deeniyat</a>
+        </div>
+      </div>
+      <div>
+        <div class="footer-heading">Academic Programs</div>
+        <div class="footer-links">
+          <a href="#courses" class="footer-link" onclick="showCat('cbse')">CBSE Tuition</a>
+          <a href="#courses" class="footer-link" onclick="showCat('state')">State Board</a>
+          <a href="#courses" class="footer-link" onclick="showCat('competitive')">UPSC / NEET / JEE</a>
+          <a href="#courses" class="footer-link" onclick="showCat('open')">Open Schooling</a>
+          <a href="#courses" class="footer-link" onclick="showCat('intl')">International Programs</a>
+          <a href="#courses" class="footer-link" onclick="showCat('open')">Govt Job Prep</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="footer-bottom-text">
+        © 2024 Maulana Arabic Idara. All rights reserved. | Managed by Mufti Muhammad Tariq Ansari Qasmi (D.B.)
+      </div>
+      <div class="footer-legal">
+        <a href="#">Privacy Policy</a>
+        <a href="#">Terms of Use</a>
+        <a href="#">Refund Policy</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- WHATSAPP FLOAT -->
+<a href="https://wa.me/919560386360?text=Assalamualaikum!" class="whatsapp-float" target="_blank" title="Chat on WhatsApp">
+  <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+</a>
+
+<!-- BACK TO TOP -->
+<button id="back-top" onclick="window.scrollTo({top:0,behavior:'smooth'})" title="Back to top">↑</button>
+
+<!-- ADMISSION MODAL -->
+<div class="modal-overlay" id="admissionModal" onclick="closeModalOut(event)">
+  <div class="modal-box" id="modalBox">
+    <button class="modal-close" onclick="closeModal()">✕</button>
+    <div id="formArea">
+      <div class="modal-title">Apply for Admission</div>
+      <div class="modal-sub">Fill in all required fields. All fields marked * are mandatory.</div>
+      <div class="step-indicator">
+        <div class="step-ind active" id="ind1"></div>
+        <div class="step-ind" id="ind2"></div>
+        <div class="step-ind" id="ind3"></div>
+      </div>
+      <!-- STEP 1 -->
+      <div class="form-step active" id="step1">
+        <div class="file-upload" onclick="document.getElementById('photo-up').click()">
+          <div class="file-upload-icon">📸</div>
+          <div class="file-upload-text"><strong>Upload Student Photo *</strong><br>Click to browse (JPG, PNG — max 2MB)</div>
+          <input type="file" id="photo-up" accept="image/*" onchange="fileSelected(this,'photo-name')">
+        </div>
+        <div id="photo-name" style="font-size:.8rem;color:var(--emerald);margin:6px 0 16px;display:none"></div>
+        <div class="form-row">
+          <div class="form-group"><label>Full Name *</label><input type="text" id="f-name" placeholder="Student's full name" required></div>
+          <div class="form-group">
+            <label>Gender *</label>
+            <select id="f-gender"><option value="">Select</option><option>Male</option><option>Female</option></select>
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-group"><label>Date of Birth *</label><input type="date" id="f-dob" required></div>
+          <div class="form-group"><label>Mobile Number *</label><input type="tel" id="f-mobile" placeholder="10-digit mobile" maxlength="10" required></div>
+        </div>
+        <div class="form-row">
+          <div class="form-group"><label>WhatsApp Number *</label><input type="tel" id="f-wa" placeholder="WhatsApp number" maxlength="10" required></div>
+          <div class="form-group"><label>Parent / Guardian Name *</label><input type="text" id="f-parent" placeholder="Parent or guardian name" required></div>
+        </div>
+        <div class="form-group"><label>Full Address *</label><input type="text" id="f-address" placeholder="Complete address with city and state" required></div>
+        <button class="btn btn-emerald" style="width:100%;justify-content:center;margin-top:8px" onclick="nextStep(1)">Next: Course Selection →</button>
+      </div>
+      <!-- STEP 2 -->
+      <div class="form-step" id="step2">
+        <div class="form-group">
+          <label>Select Course *</label>
+          <select id="f-course">
+            <option value="">— Choose a Course —</option>
+            <optgroup label="Islamic Studies">
+              <option>Nazra Quran Course</option>
+              <option>Tajweed Quran Course</option>
+              <option>Hifz-e-Quran Course</option>
+              <option>Tafseer-e-Quran Course</option>
+              <option>Deeniyat (3 Years)</option>
+              <option>Deeniyat (5 Years)</option>
+              <option>Aalimiyat (3 Years)</option>
+              <option>Aalimiyat (6 Years - Complete Dars-e-Nizami)</option>
+              <option>Fiqh Hanafi Course</option>
+              <option>Fiqh Shafi Course</option>
+              <option>Arabic Language Course</option>
+              <option>Takmeel-e-Ifta (Mufti Course)</option>
+              <option>Muhaddith Course</option>
+            </optgroup>
+            <optgroup label="CBSE Tuition">
+              <option>CBSE 8th Standard</option>
+              <option>CBSE 9th Standard</option>
+              <option>CBSE 10th Standard</option>
+              <option>CBSE 11th Standard</option>
+              <option>CBSE 12th Standard</option>
+            </optgroup>
+            <optgroup label="State Board">
+              <option>State Board 8th Standard</option>
+              <option>State Board 10th Standard</option>
+              <option>State Board 12th Standard</option>
+            </optgroup>
+            <optgroup label="Competitive Exams">
+              <option>UPSC Preparation</option>
+              <option>NEET Preparation</option>
+              <option>JEE Preparation</option>
+              <option>CET Preparation</option>
+            </optgroup>
+            <optgroup label="Open Schooling">
+              <option>10th Open Schooling (NIOS)</option>
+              <option>12th Open Schooling (NIOS)</option>
+              <option>Degree Through Open University</option>
+            </optgroup>
+            <optgroup label="International">
+              <option>Malaysia - Form 3/4/5/6</option>
+              <option>Indonesia - SMA</option>
+              <option>USA - High School</option>
+              <option>South Africa - Grade 9-12</option>
+            </optgroup>
+          </select>
+        </div>
+        <div style="background:var(--bg-light);border-radius:12px;padding:20px;margin-bottom:20px">
+          <h4 style="color:var(--emerald);margin-bottom:12px;font-size:.95rem">💳 Payment Instructions</h4>
+          <p style="font-size:.85rem;color:var(--text-muted);margin-bottom:16px">Scan the QR code below to pay the admission fee. After payment, upload the screenshot and enter your UTR number.</p>
+          <div style="background:#fff;border-radius:10px;padding:20px;text-align:center;border:1.5px dashed var(--emerald)">
+            <div style="font-size:3rem;margin-bottom:8px">QR</div>
+            <div style="font-size:.78rem;color:var(--text-muted)">Payment QR Code<br>(Admin will upload the QR code here)</div>
+            <button class="btn btn-sm" style="margin-top:12px;background:var(--bg-light);border:1px solid var(--border);color:var(--text)" onclick="alert('QR Download — will work with backend integration')">⬇ Download QR</button>
+          </div>
+        </div>
+        <div class="file-upload" onclick="document.getElementById('pay-up').click()" style="margin-bottom:16px">
+          <div class="file-upload-icon">🧾</div>
+          <div class="file-upload-text"><strong>Upload Payment Screenshot *</strong><br>Upload your payment confirmation screenshot</div>
+          <input type="file" id="pay-up" accept="image/*" onchange="fileSelected(this,'pay-name')">
+        </div>
+        <div id="pay-name" style="font-size:.8rem;color:var(--emerald);margin:6px 0 16px;display:none"></div>
+        <div class="form-group"><label>UTR / Transaction Number *</label><input type="text" id="f-utr" placeholder="12-digit UTR or transaction ID" required></div>
+        <div style="display:flex;gap:12px">
+          <button class="btn" style="flex:1;justify-content:center;background:var(--bg-light);border:1.5px solid var(--border);color:var(--text)" onclick="prevStep(2)">← Back</button>
+          <button class="btn btn-emerald" style="flex:2;justify-content:center" onclick="nextStep(2)">Review Application →</button>
+        </div>
+      </div>
+      <!-- STEP 3 REVIEW -->
+      <div class="form-step" id="step3">
+        <div style="background:var(--bg-light);border-radius:12px;padding:20px;margin-bottom:20px" id="review-content">
+          <h4 style="color:var(--emerald);margin-bottom:16px">Review Your Application</h4>
+          <div id="review-details"></div>
+        </div>
+        <div style="display:flex;gap:12px">
+          <button class="btn" style="flex:1;justify-content:center;background:var(--bg-light);border:1.5px solid var(--border);color:var(--text)" onclick="prevStep(3)">← Edit</button>
+          <button class="btn btn-gold" style="flex:2;justify-content:center;color:var(--emerald-dark)" onclick="submitAdmission()">✓ Submit Application</button>
+        </div>
+        <p style="font-size:.75rem;color:var(--text-muted);margin-top:12px;text-align:center">By submitting, you agree to our terms. Application status will be updated within 2-3 working days.</p>
+      </div>
+    </div>
+    <!-- SUCCESS -->
+    <div id="successArea" style="display:none">
+      <div class="success-state">
+        <div class="success-icon">🎉</div>
+        <div class="success-title">Application Submitted!</div>
+        <p class="success-text">Alhamdulillah! Your admission application has been received. Our team will review it within 2–3 working days and contact you via WhatsApp.</p>
+        <div class="ref-box">
+          <div class="ref-label">Your Application ID</div>
+          <div class="ref-num" id="app-id">MAI-2024-00000</div>
+          <div style="font-size:.75rem;color:var(--text-muted);margin-top:8px">Status: <span class="status-badge status-pending" style="padding:4px 12px;font-size:.75rem">⏳ Pending Review</span></div>
+        </div>
+        <p style="font-size:.82rem;color:var(--text-muted)">Please save your Application ID for tracking. You can check status at the <a href="#tracking" style="color:var(--emerald)" onclick="closeModal()">Track Application</a> section using your mobile number.</p>
+        <button class="btn btn-emerald" onclick="downloadReceipt()">⬇ Download PDF Receipt</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+// ── HEADER SCROLL ──
+const hdr = document.getElementById('header');
+window.addEventListener('scroll', () => {
+  if(window.scrollY > 60) hdr.classList.add('scrolled');
+  else hdr.classList.remove('scrolled');
+  
+  const bt = document.getElementById('back-top');
+  if(window.scrollY > 400) bt.classList.add('show');
+  else bt.classList.remove('show');
+});
+
+// ── MOBILE NAV ──
+function toggleMobileNav(){
+  document.getElementById('mobileNav').classList.toggle('open');
+}
+
+// ── FADE IN OBSERVER ──
+const io = new IntersectionObserver((entries) => {
+  entries.forEach(e => {if(e.isIntersecting){e.target.classList.add('visible')}});
+}, {threshold:0.1});
+document.querySelectorAll('.fade-in').forEach(el => io.observe(el));
+
+// ── COURSE TABS ──
+function showCat(id) {
+  document.querySelectorAll('.course-category').forEach(c=>c.classList.remove('active'));
+  document.querySelectorAll('.tab-btn').forEach(b=>b.classList.remove('active'));
+  document.getElementById('cat-'+id).classList.add('active');
+  event.target.classList.add('active');
+  document.getElementById('courses').scrollIntoView({behavior:'smooth'});
+}
+
+// ── QUOTES ──
+const quotes = [
+  {a:"اقْرَأْ بِاسْمِ رَبِّكَ الَّذِي خَلَقَ",e:'"Read in the name of your Lord who created."',s:"— Al-Quran, Surah Al-Alaq 96:1"},
+  {a:"طَلَبُ الْعِلْمِ فَرِيضَةٌ عَلَى كُلِّ مُسْلِمٍ",e:'"Seeking knowledge is an obligation upon every Muslim."',s:"— Hadith, Ibn Majah"},
+  {a:"خَيْرُكُمْ مَنْ تَعَلَّمَ الْقُرْآنَ وَعَلَّمَهُ",e:'"The best among you are those who learn the Quran and teach it."',s:"— Sahih al-Bukhari"},
+  {a:"الْعِلْمُ نُورٌ",e:'"Knowledge is light."',s:"— Classical Islamic Wisdom"},
+  {a:"مَنْ سَلَكَ طَرِيقًا يَلْتَمِسُ فِيهِ عِلْمًا سَهَّلَ اللهُ لَهُ طَرِيقًا إِلَى الْجَنَّةِ",e:'"Whoever follows a path to seek knowledge, Allah will ease for him a path to Paradise."',s:"— Sahih Muslim"},
+  {a:"الْعُلَمَاءُ وَرَثَةُ الْأَنْبِيَاءِ",e:'"The scholars are the inheritors of the Prophets."',s:"— Hadith, Abu Dawud"},
+  {a:"تَعَلَّمُوا فَإِنَّ الْعِلْمَ زَيْنٌ لِصَاحِبِهِ",e:'"Learn, for knowledge is an adornment for its possessor."',s:"— Classical Islamic Tradition"},
+  {a:"إِنَّمَا يَخْشَى اللَّهَ مِنْ عِبَادِهِ الْعُلَمَاءُ",e:'"Indeed, it is only those among His servants with knowledge who fear Allah."',s:"— Al-Quran, Surah Fatir 35:28"},
+];
+let qi=0;
+const qdots = document.getElementById('qdots');
+quotes.forEach((_,i)=>{const d=document.createElement('button');d.className='quote-dot'+(i===0?' active':'');d.onclick=()=>showQ(i);qdots.appendChild(d)});
+function showQ(i){
+  qi=i;
+  document.getElementById('qa').textContent=quotes[i].a;
+  document.getElementById('qe').textContent=quotes[i].e;
+  document.getElementById('qs').textContent=quotes[i].s;
+  document.querySelectorAll('.quote-dot').forEach((d,j)=>d.classList.toggle('active',j===i));
+}
+setInterval(()=>showQ((qi+1)%quotes.length),5000);
+
+// ── MODAL ──
+function openModal(){document.getElementById('admissionModal').classList.add('open')}
+function closeModal(){document.getElementById('admissionModal').classList.remove('open');resetForm()}
+function closeModalOut(e){if(e.target===document.getElementById('admissionModal'))closeModal()}
+
+function resetForm(){
+  document.getElementById('formArea').style.display='block';
+  document.getElementById('successArea').style.display='none';
+  currentStep=1;
+  document.querySelectorAll('.form-step').forEach(s=>s.classList.remove('active'));
+  document.getElementById('step1').classList.add('active');
+  ['ind1','ind2','ind3'].forEach((id,i)=>{
+    const el=document.getElementById(id);el.classList.remove('done','active');
+    if(i===0)el.classList.add('active');
+  });
+}
+
+let currentStep=1;
+function nextStep(from){
+  if(from===1){
+    const name=document.getElementById('f-name').value;
+    const gender=document.getElementById('f-gender').value;
+    const dob=document.getElementById('f-dob').value;
+    const mobile=document.getElementById('f-mobile').value;
+    if(!name||!gender||!dob||!mobile){alert('Please fill all required fields in Step 1.');return}
+  }
+  if(from===2){
+    const course=document.getElementById('f-course').value;
+    const utr=document.getElementById('f-utr').value;
+    if(!course||!utr){alert('Please select a course and enter your UTR number.');return}
+    populateReview();
+  }
+  document.getElementById('step'+from).classList.remove('active');
+  document.getElementById('step'+(from+1)).classList.add('active');
+  document.getElementById('ind'+from).classList.remove('active');
+  document.getElementById('ind'+from).classList.add('done');
+  document.getElementById('ind'+(from+1)).classList.add('active');
+  currentStep=from+1;
+  document.getElementById('modalBox').scrollTop=0;
+}
+function prevStep(from){
+  document.getElementById('step'+from).classList.remove('active');
+  document.getElementById('step'+(from-1)).classList.add('active');
+  document.getElementById('ind'+from).classList.remove('active');
+  document.getElementById('ind'+(from-1)).classList.remove('done');
+  document.getElementById('ind'+(from-1)).classList.add('active');
+  currentStep=from-1;
+}
+function populateReview(){
+  const d=document.getElementById('review-details');
+  const fields=[
+    ['Name',document.getElementById('f-name').value],
+    ['Gender',document.getElementById('f-gender').value],
+    ['Date of Birth',document.getElementById('f-dob').value],
+    ['Mobile',document.getElementById('f-mobile').value],
+    ['WhatsApp',document.getElementById('f-wa').value],
+    ['Parent/Guardian',document.getElementById('f-parent').value],
+    ['Address',document.getElementById('f-address').value],
+    ['Course Applied',document.getElementById('f-course').value],
+    ['UTR Number',document.getElementById('f-utr').value],
+    ['Status','Pending']
+  ];
+  d.innerHTML=fields.map(([k,v])=>`<div style="display:flex;gap:12px;padding:8px 0;border-bottom:1px solid var(--border);font-size:.85rem"><strong style="min-width:130px;color:var(--text-muted)">${k}:</strong><span style="color:var(--text);font-weight:500">${v||'—'}</span></div>`).join('');
+}
+function submitAdmission(){
+  const appId='MAI-2024-'+String(Math.floor(10000+Math.random()*90000));
+  document.getElementById('app-id').textContent=appId;
+  document.getElementById('formArea').style.display='none';
+  document.getElementById('successArea').style.display='block';
+  document.getElementById('modalBox').scrollTop=0;
+}
+function downloadReceipt(){alert('PDF receipt download will be enabled with backend integration. Your Application ID: '+document.getElementById('app-id').textContent)}
+
+function fileSelected(input,targetId){
+  const el=document.getElementById(targetId);
+  if(input.files[0]){el.style.display='block';el.textContent='✓ '+input.files[0].name}
+}
+
+// ── TRACKING ──
+function trackAdmission(){
+  const phone=document.getElementById('track-phone').value;
+  const result=document.getElementById('admission-result');
+  if(!phone||phone.length<10){alert('Please enter a valid 10-digit mobile number');return}
+  result.style.display='block';
+  result.innerHTML=`<div style="text-align:center;padding:20px;background:var(--bg-light);border-radius:12px"><p style="font-size:.85rem;color:var(--text-muted)">Searching for application with mobile: <strong>+91 ${phone}</strong></p><p style="font-size:.82rem;color:var(--text-muted);margin-top:8px">Live tracking will be available once connected to the database. Please contact us on WhatsApp for immediate status update.</p><a href="https://wa.me/919560386360?text=Please check my admission status for mobile: ${phone}" class="btn btn-emerald btn-sm" style="margin-top:12px;display:inline-flex" target="_blank">Check via WhatsApp</a></div>`;
+}
+function trackEnrollment(){
+  const ref=document.getElementById('track-ref').value;
+  const result=document.getElementById('enrollment-result');
+  if(!ref){alert('Please enter your Reference Number');return}
+  result.style.display='block';
+  result.innerHTML=`<div style="text-align:center;padding:20px;background:var(--bg-light);border-radius:12px"><p style="font-size:.85rem;color:var(--text-muted)">Searching for enrollment with Ref: <strong>${ref}</strong></p><p style="font-size:.82rem;color:var(--text-muted);margin-top:8px">Live enrollment tracking will be available once connected to the database.</p><a href="https://wa.me/919560386360?text=Please check enrollment status for Ref: ${ref}" class="btn btn-emerald btn-sm" style="margin-top:12px;display:inline-flex" target="_blank">Verify via WhatsApp</a></div>`;
+}
+
+// ── CONTACT ──
+function submitContact(btn){
+  btn.textContent='✓ Message Sent!';
+  btn.style.background='var(--accent)';
+  btn.disabled=true;
+  setTimeout(()=>{btn.textContent='Send Message →';btn.style.background='';btn.disabled=false},3000);
+}
+
+// ── COUNTER ANIMATION ──
+function animateCounters(){
+  document.querySelectorAll('.stat-num').forEach(el=>{
+    const target=parseInt(el.textContent);
+    if(isNaN(target))return;
+    let cur=0;const step=target/40;
+    const timer=setInterval(()=>{
+      cur+=step;if(cur>=target){el.textContent=target+'+';clearInterval(timer);return}
+      el.textContent=Math.floor(cur)+'+';
+    },30);
+  });
+}
+setTimeout(animateCounters,1500);
+</script>
+</body>
+</html>
